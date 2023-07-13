@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.thongtin.HelloController">
+
+    <center>
+        <TableView fx:id="studentTable" maxHeight="200.0" maxWidth="600.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name"/>
+                <TableColumn fx:id="classColumn" prefWidth="75.0" text="Class"/>
+                <TableColumn fx:id="genderColumn" prefWidth="75.0" text="Gender"/>
+                <TableColumn fx:id="addressColumn" prefWidth="150.0" text="Address"/>
+                <TableColumn fx:id="scoreColumn" prefWidth="75.0" text="Score"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+            <Button fx:id="addStudentButton" mnemonicParsing="false" text="Add" onAction="#addStudent"/>
+            <Button fx:id="updateStudentButton" mnemonicParsing="false" text="Update" onAction="#updateStudent"/>
+            <Button fx:id="deleteStudentButton" mnemonicParsing="false" text="Delete" onAction="#deleteStudent"/>
+        </HBox>
+    </bottom>
+
+    <top>
+        <VBox alignment="CENTER" spacing="10.0">
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="ID"/>
+                <TextField fx:id="idField"/>
+                <Label text="Name"/>
+                <TextField fx:id="nameField"/>
+                <Label text="Class"/>
+                <TextField fx:id="classField"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <Label text="Gender"/>
+                <TextField fx:id="genderField"/>
+                <Label text="Address"/>
+                <TextField fx:id="addressField"/>
+                <Label text="Score"/>
+                <TextField fx:id="scoreField"/>
+            </HBox>
+        </VBox>
+    </top>
+
+</BorderPane>
